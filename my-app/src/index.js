@@ -10,43 +10,48 @@ import ReactDOM from 'react-dom';
 //sayName("john")
 
 function People(){
+
+  const friends=[
+    {name:'hamza',
+  job:'designer'
+  },
+  {name:'ali',
+  job:'apple'
+  }
+  ]
   return(
 <section>
- <Person name="hamza" job="developer"/>
- <Person name="ali" job="designer"/>
+ <Person person={friends[0]}/>
+ <Person person={friends[1]}/>
+ {/* <Person name="ahmed" job="cloudnative" age="22" company="apple"/> */}
 
 
- {/* <Person1 /> */}
+ 
 
 </section>
 
   );
 }
 
+const person={
+  name:"hammad",
+  age:26
+};
+const{name}=person;
+console.log(name)
 const Person=props=>{
-  console.log(props);
+  // console.log(props);
+  const {name,job}=props.person;
   return(
 
  
     <article>
-      <h1>{props.name}</h1>
-      <p>{props.job}</p>
+      <h1>{name}</h1>
+      <p>{job}</p>
       <hr/>
     </article>
   )
 }
-
-// const Person1=props=>{
-
-//   console.log(props);
-//   return(
-//     <article>
-//       <h1>Ali</h1>
-//       <p>designer</p>
-//       <hr/>
-//     </article>
-//   )
-// }
 
 
 
