@@ -75,7 +75,18 @@ import ReactDOM from 'react-dom';
 
 
 
+function Person(){
 
+  const btn='search button';
+  const fname='hamza';
+  const lname='ali';
+  return (<section>
+  
+  <button>{btn}</button>
+  <h2>{fname+" "+lname}</h2>
+  <p>info</p>
+  </section>)
+}
 
 
 
